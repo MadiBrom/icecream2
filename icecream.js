@@ -18,7 +18,7 @@ function update(froyo) {
   // counts each flavor in the array
   flavors.forEach(function (flavor) {
     // adds a number to the original object every time the counter finds the similar item
-    if (order.hasOwnProperty(flavor)) {
+    if (flavor in order) {
       order[flavor] += 1;
     }
   });
