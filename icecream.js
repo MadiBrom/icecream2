@@ -13,11 +13,13 @@ const froyoInput = prompt(
 );
 // taking the order and making
 function update(froyo) {
-  // takes array from input and splits it at the commas
+  // Takes a comma-separated string of flavors and splits it into an array
   const flavors = froyo.split(",");
-  // counts each flavor in the array
+  // Repeats over each flavor in the array
+  // function(flavor) creates an argument to forEach that makes sure the "if loop" will be executed
   flavors.forEach(function (flavor) {
     // adds a number to the original object every time the counter finds the similar item
+    // links flavor to the "order" constant and adds one for evey similar element found
     if (flavor in order) {
       order[flavor] += 1;
     }
